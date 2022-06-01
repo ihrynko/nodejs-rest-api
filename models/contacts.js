@@ -33,17 +33,25 @@ async function removeContact(contactId) {
   return deletedProduct;
 }
 
-async function addContact(name, email, phone) {
+async function addContact(body) {
   const contacts = await listContacts();
-  const newContact = { name: name, email: email, phone: phone, id: v4() };
+  const newContact = { id: v4(), ...body };
   contacts.push(newContact);
 
   await fs.writeFile(contactsPath, JSON.stringify(contacts));
 }
 
-// const addContact = async (body) => {}
+const updateContact = async (contactId, body) => {
+  const contacts = await listContacts();
+  const index = contacts.findIndex((contact) => contact.id === contactId);
 
-const updateContact = async (contactId, body) => {};
+  if (index !== -1) {
+    contacts[index] = { ...contacts[index], ...body };
+     await fs.writeFile(contactsPath, JSON.stringify(contacts));
+    return contacts[index];
+  }
+  return null;
+};
 
 module.exports = {
   listContacts,
