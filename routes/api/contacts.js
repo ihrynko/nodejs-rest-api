@@ -1,5 +1,6 @@
 const express = require("express");
 
+
 const { validation, ctrlWrapper } = require("../../middlewares");
 const { joiSchema, favoriteJoiSchema } = require("../../models/contact");
 const { contacts: ctrl } = require("../../controllers");
@@ -29,5 +30,6 @@ router.patch(
   validation(favoriteJoiSchema, "Missing field favorite"),
   ctrlWrapper(ctrl.updateStatusContact)
 );
+
 
 module.exports = router;
