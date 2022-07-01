@@ -18,6 +18,4 @@ const removeContact = async (req, res, next) => {
   })
 }
 
-
 module.exports = removeContact
-

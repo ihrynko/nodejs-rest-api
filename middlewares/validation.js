@@ -11,8 +11,4 @@ const validation = (schema, message) => {
   };
 };
 
-
-
-
 module.exports = validation;
-

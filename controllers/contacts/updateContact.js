@@ -1,4 +1,3 @@
-
 const { NotFound } = require('http-errors')
 const ObjectID = require('mongoose').Types.ObjectId
 
@@ -25,4 +24,3 @@ const updateContact = async (req, res, next) => {
 }
 
 module.exports = updateContact
-

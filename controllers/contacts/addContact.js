@@ -1,4 +1,3 @@
-
 const { Contact } = require('../../models')
 
 const addContact = async (req, res) => {
@@ -15,4 +14,3 @@ const addContact = async (req, res) => {
 }
 
 module.exports = addContact
-

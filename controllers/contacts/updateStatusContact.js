@@ -25,4 +25,3 @@ const updateStatusContact = async (req, res, next) => {
 }
 
 module.exports = updateStatusContact
-

@@ -1,4 +1,3 @@
-
 const { NotFound } = require('http-errors')
 
 const { Contact } = require('../../models')
@@ -20,4 +19,3 @@ const getContactById = async (req, res, next) => {
 }
 
 module.exports = getContactById
-

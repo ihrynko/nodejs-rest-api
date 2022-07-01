@@ -25,4 +25,3 @@ const listContacts = async (req, res, next) => {
 }
 
 module.exports = listContacts
-
