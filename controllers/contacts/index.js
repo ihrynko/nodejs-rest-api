@@ -5,6 +5,7 @@ const addContact = require("./addContact");
 const updateContact = require("./updateContact");
 const updateStatusContact = require("./updateStatusContact");
 
+
 module.exports = {
   listContacts,
   getContactById,
@@ -13,3 +14,4 @@ module.exports = {
   updateContact,
   updateStatusContact,
 };
+
